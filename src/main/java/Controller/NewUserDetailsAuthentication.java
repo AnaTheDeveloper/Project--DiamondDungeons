@@ -1,11 +1,11 @@
 package Controller;
 
-import Service.AccountSignIn;
-import Service.NewAccountRequest;
+import Service.LogInAndSignUpServices.AccountSignIn;
+import Service.LogInAndSignUpServices.AccountSignUp;
 
 public class NewUserDetailsAuthentication {
 
-  NewAccountRequest newAccountRequest;
+  AccountSignUp accountSignUp;
   AccountSignIn accountSignIn;
 
   public boolean checkMenuSelection(String menuNumber){
@@ -15,8 +15,8 @@ public class NewUserDetailsAuthentication {
       accountSignIn.accountSignIn();
 
     }else if (menuNumber.equals("2")){
-      newAccountRequest = new NewAccountRequest();
-      newAccountRequest.creatingANewAccount();
+      accountSignUp = new AccountSignUp();
+      accountSignUp.creatingANewAccount();
     }else if (menuNumber.equals("3")) {
       System.out.println("You can only enter the numbers that are available.");
     }

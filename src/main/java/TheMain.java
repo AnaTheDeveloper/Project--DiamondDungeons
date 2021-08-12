@@ -1,6 +1,6 @@
 
 import DataAccessLayer.GameDatabase;
-import Service.AgeConfirmationAndGameMenu;
+import Service.AgeAuthentication.AgeConfirmationAndGameMenu;
 
 
 public class TheMain {

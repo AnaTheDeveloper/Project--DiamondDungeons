@@ -1,4 +1,4 @@
-package Service;
+package Service.LogInAndSignUpServices;
 
 import DataAccessLayer.GameDatabase;
 import java.util.Scanner;

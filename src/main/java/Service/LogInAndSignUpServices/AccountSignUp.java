@@ -1,10 +1,10 @@
-package Service;
+package Service.LogInAndSignUpServices;
 
 import DataAccessLayer.GameDatabase;
 import Model.LogInScreen;
 import java.util.Scanner;
 
-public class NewAccountRequest {
+public class AccountSignUp {
 
 
   public void creatingANewAccount(){

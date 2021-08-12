@@ -1,4 +1,4 @@
-package Service;
+package Service.AgeAuthentication;
 
 import Controller.GameAgeAuthentication;
 import Controller.NewUserDetailsAuthentication;
