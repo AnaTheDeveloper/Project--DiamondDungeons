@@ -4,6 +4,7 @@ public class LogInScreen {
 
   private String username;
   private String password;
+  private int UID;
 
 
   public LogInScreen(String username, String password) {

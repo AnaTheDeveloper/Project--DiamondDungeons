@@ -2,6 +2,7 @@ package Service.LogInAndSignUpServices;
 
 import DataAccessLayer.GameDatabase;
 import Model.LogInScreen;
+import auth.Authentication;
 import java.util.Scanner;
 
 public class AccountSignUp {
@@ -20,6 +21,11 @@ public class AccountSignUp {
     LogInScreen logInScreenProfile = new LogInScreen(usernameSavedResponse, passwordSavedResponse);
 
     GameDatabase.addingNewAccountToTheDatabase(logInScreenProfile);
+
+    System.out.println("Thanks for signing up! Now sign in please:");
+
+    Authentication authentication = new Authentication();
+    authentication.authenticationScreen();
   }
 
   //This method takes in the new userinput and sends it to the database.

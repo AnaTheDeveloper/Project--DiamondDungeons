@@ -3,15 +3,16 @@ package Model;
 public class CustomCharacterModel {
 
   private String characterInGameName;
-  private int characterAge;
+  private String characterAge;
   private String characterHairStyle;
   private String characterHairColour;
   private String characterEyeColour;
   private String characterOutfit;
   private String characterWeapon;
   private String characterArmour;
+  private int UID;
 
-  public CustomCharacterModel(String characterInGameName, int characterAge,
+  public CustomCharacterModel(String characterInGameName, String characterAge,
       String characterHairStyle, String characterHairColour, String characterEyeColour,
       String characterOutfit, String characterWeapon, String characterArmour) {
 
@@ -33,11 +34,11 @@ public class CustomCharacterModel {
     this.characterInGameName = characterInGameName;
   }
 
-  public int getCharacterAge() {
+  public String getCharacterAge() {
     return characterAge;
   }
 
-  public void setCharacterAge(int characterAge) {
+  public void setCharacterAge(String characterAge) {
     this.characterAge = characterAge;
   }
 

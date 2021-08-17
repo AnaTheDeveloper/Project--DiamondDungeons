@@ -26,6 +26,7 @@ public class MenuController {
       System.out.println("Please enter the number options that are available.");
     }
     return true;
+
   }
 
   //Once in the game menu, this method checks which option was selected.

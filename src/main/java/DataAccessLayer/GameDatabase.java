@@ -1,5 +1,6 @@
 package DataAccessLayer;
 
+import Model.CustomCharacterModel;
 import Model.LogInScreen;
 import java.util.ArrayList;
 
@@ -19,6 +20,8 @@ public class GameDatabase {
 
   //This method checks if there is anything in the database, if not it creates a new ArrayList.
 
+  //Crud operations below:
+
 
   public static void addingNewAccountToTheDatabase(LogInScreen newUsersProfile){
 
@@ -36,16 +39,18 @@ public class GameDatabase {
 
   public static void removingAnAccountFromTheDatabase(){
 
-    //Get the into first then .remove()
+    /* 1: Ask user which is the account name
+       2: Compare usersresponse with whats int he database
+     */
 
   }
 
-  public static void viewTheDatabase(){
+  public static void viewTheDatabase(ArrayList<LogInScreen> viewDatabase){
 
-    for (LogInScreen view : diamondDungeonsDatabase) {
-      System.out.println(view);
-    }
-
+//    for (int database = 0; database < viewDatabase.size(); database++){
+//      System.out.println(viewDatabase.get(database) + " ");
+//    }
+//    System.out.println();
   }
 
   public static void updateTheDatabase(){
@@ -68,11 +73,10 @@ public class GameDatabase {
 
       if (databaseProfiles.getUsername().equals(usernameResponse)) {
 
-        System.out.println("This username is correct. Please enter your password.");
+
         emergencyTemporaryProfileHolder = databaseProfiles;
 
       } else {
-        System.out.println("This username does not exist.");
         emergencyTemporaryProfileHolder = new LogInScreen("UNAVAILABLE", "");
       }
     }
@@ -81,7 +85,18 @@ public class GameDatabase {
 
   //This method checks the database for the username that the user inputted.
 
+  public static void addingNewCharacterProfileToTheDatabase(CustomCharacterModel newCharacterProfile){
 
+//    ArrayList<CustomCharacterModel> customCharacter = databaseAccess();
+//
+//    customCharacter.add(newCharacterProfile);
+//
+//    for (CustomCharacterModel customCharacterModel : diamondDungeonsDatabase){
+//      System.out.println(customCharacterModel.toString());
+//    }
+    //This method adds a new character to the database
+    //DO I NEED A NEW DATABASE TO HOLD THIS NEW INFO??
+  }
 
 
 }

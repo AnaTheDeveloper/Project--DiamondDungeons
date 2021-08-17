@@ -4,7 +4,8 @@ public class NewPlayerProfile {
 
   private String profileName;
   private String profileGender;     //Male, Female or Ungendered
-  private String profileHunter;     //Assassin, Mage, Knight
+  private String profileHunter;
+  private int UID;//Assassin, Mage, Knight
 
   public NewPlayerProfile(String profileName, String profileGender, String profileHunter) {
     this.profileName = profileName;
