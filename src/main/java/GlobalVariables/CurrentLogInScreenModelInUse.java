@@ -6,8 +6,7 @@ public class CurrentLogInScreenModelInUse {
 
   private static LogInScreen currentActiveLiveVariable;
 
-
-
+  // This is the name we have given to the live variable which is active on the stage
 
   public static LogInScreen accessTheCurrentLiveVariable() {
     return currentActiveLiveVariable;

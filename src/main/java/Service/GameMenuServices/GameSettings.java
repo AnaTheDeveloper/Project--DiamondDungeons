@@ -1,5 +1,7 @@
 package Service.GameMenuServices;
 
+import Controller.GameMenuController.GameMenu;
+
 public class GameSettings {
 
 
@@ -9,7 +11,8 @@ public class GameSettings {
 
     System.out.println("You can either select or change the difficulty, volume and graphics");
 
-
+    GameMenu gameMenu = new GameMenu();
+    gameMenu.gameMenu();
 
 
   }

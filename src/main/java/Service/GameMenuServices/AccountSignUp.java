@@ -1,8 +1,8 @@
-package Service.LogInAndSignUpServices;
+package Service.GameMenuServices;
 
 import DataAccessLayer.GameDatabase;
 import Model.LogInScreen;
-import auth.Authentication;
+import Controller.GameMenuController.AuthenticationMenu;
 import java.util.Scanner;
 
 public class AccountSignUp {
@@ -24,8 +24,8 @@ public class AccountSignUp {
 
     System.out.println("Thanks for signing up! Now sign in please:");
 
-    Authentication authentication = new Authentication();
-    authentication.authenticationScreen();
+    AuthenticationMenu authenticationMenu = new AuthenticationMenu();
+    authenticationMenu.authenticationScreen();
   }
 
   //This method takes in the new userinput and sends it to the database.

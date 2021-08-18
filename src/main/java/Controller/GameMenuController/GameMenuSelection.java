@@ -1,14 +1,14 @@
-package Controller;
+package Controller.GameMenuController;
 
-import Service.GameMenuServices.CharacterCustomization;
+import Controller.CharacterCustomisationController.CharacterCustomizationMenu;
 import Service.GameMenuServices.GameSettings;
 import Service.GameMenuServices.PlayDiamondDungeons;
 
-public class MenuController {
+public class GameMenuSelection {
 
   PlayDiamondDungeons playDiamondDungeons;
   GameSettings gameSettings;
-  CharacterCustomization characterCustomization;
+  CharacterCustomizationMenu characterCustomizationMenu;
 
 
   public boolean menuNumberSelection(String menuNumber){
@@ -17,13 +17,15 @@ public class MenuController {
       playDiamondDungeons = new PlayDiamondDungeons();
       playDiamondDungeons.enterDungeon();
     }else if (menuNumber.equals("2")){
-      characterCustomization = new CharacterCustomization();
-      characterCustomization.createCustomCharacter();
+      characterCustomizationMenu = new CharacterCustomizationMenu();
+      characterCustomizationMenu.createCustomCharacter();
     }else if (menuNumber.equals("3")){
       gameSettings = new GameSettings();
       gameSettings.settings();
     }else{
       System.out.println("Please enter the number options that are available.");
+      GameMenu gameMenu = new GameMenu();
+      gameMenu.gameMenu();
     }
     return true;
 

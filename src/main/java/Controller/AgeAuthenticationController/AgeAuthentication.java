@@ -1,10 +1,9 @@
-package Service.AgeAuthentication;
+package Controller.AgeAuthenticationController;
 
-import Controller.GameAgeAuthentication;
-import Controller.NewUserDetailsAuthentication;
+import Service.AgeAuthenticationService.AgeConfirmation;
 import java.util.Scanner;
 
-public class AgeConfirmationAndGameMenu {
+public class AgeAuthentication {
 
   //This class confirms that the user is over 18
   //Once confirmed it opens up the initial game menu: LOG IN or SIGN UP
@@ -20,8 +19,8 @@ public class AgeConfirmationAndGameMenu {
     Scanner userAge = new Scanner(System.in);
     Integer userAgeResponse = Integer.valueOf(userAge.nextLine()); //intergeer.valueOf() <---Turns string to int
 
-    GameAgeAuthentication gameAgeAuthentication = new GameAgeAuthentication();
-    Boolean areTheyOver18 = gameAgeAuthentication.gameAgeAuthentication(userAgeResponse);
+    AgeConfirmation ageConfirmation = new AgeConfirmation();
+    Boolean areTheyOver18 = ageConfirmation.gameAgeAuthentication(userAgeResponse);
     return areTheyOver18;
   }
 }

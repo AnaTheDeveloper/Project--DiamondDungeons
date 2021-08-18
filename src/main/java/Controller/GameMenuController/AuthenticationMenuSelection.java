@@ -1,11 +1,10 @@
-package Controller;
+package Controller.GameMenuController;
 
-import Service.LogInAndSignUpServices.AccountSignIn;
-import Service.LogInAndSignUpServices.AccountSignUp;
-import auth.Authentication;
+import Service.GameMenuServices.AccountSignIn;
+import Service.GameMenuServices.AccountSignUp;
 
 
-public class NewUserDetailsAuthentication {
+public class AuthenticationMenuSelection {
 
   AccountSignUp accountSignUp;
   AccountSignIn accountSignIn;
@@ -21,9 +20,8 @@ public class NewUserDetailsAuthentication {
       accountSignUp.creatingANewAccount();
     }else{
       System.out.println("You can only enter the numbers that are available.");
-      //TODO: Comeback to loop
-      Authentication authentication = new Authentication();
-      authentication.authenticationScreen();
+      AuthenticationMenu authenticationMenu = new AuthenticationMenu();
+      authenticationMenu.authenticationScreen();
     }
     return true;
   }

@@ -1,6 +1,6 @@
-package Controller;
+package Service.AgeAuthenticationService;
 
-public class GameAgeAuthentication {
+public class AgeConfirmation {
 
   public Boolean gameAgeAuthentication(Integer age){
 

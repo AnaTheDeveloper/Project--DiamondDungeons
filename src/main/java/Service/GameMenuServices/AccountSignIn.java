@@ -1,9 +1,9 @@
-package Service.LogInAndSignUpServices;
+package Service.GameMenuServices;
 
 import DataAccessLayer.GameDatabase;
 import GlobalVariables.CurrentLogInScreenModelInUse;
 import Model.LogInScreen;
-import auth.Authentication;
+import Controller.GameMenuController.AuthenticationMenu;
 import java.util.Scanner;
 
 public class AccountSignIn {
@@ -20,8 +20,8 @@ public class AccountSignIn {
 
     if (foundLogInScreen.getUsername().equals("UNAVAILABLE")) {
       System.out.println("This username does not exist.");
-      Authentication authentication = new Authentication();
-      authentication.authenticationScreen();
+      AuthenticationMenu authenticationMenu = new AuthenticationMenu();
+      authenticationMenu.authenticationScreen();
     }
 
 
@@ -34,8 +34,8 @@ public class AccountSignIn {
       CurrentLogInScreenModelInUse.activateNewLiveVariable(foundLogInScreen);
     } else {
       System.out.println("Password does not match, please try again");
-      Authentication authentication = new Authentication();
-      authentication.authenticationScreen();
+      AuthenticationMenu authenticationMenu = new AuthenticationMenu();
+      authenticationMenu.authenticationScreen();
     }
 
 
