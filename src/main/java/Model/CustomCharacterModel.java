@@ -5,13 +5,18 @@ public class CustomCharacterModel {
   private String characterInGameName;
   private String characterHairColour;
   private String characterWeapon;
-  private int UID;
+  private int uid;
+
+  LogInScreen logInScreen;
 
   public CustomCharacterModel(String characterInGameName, String characterHairColour,
       String characterWeapon) {
     this.characterInGameName = characterInGameName;
     this.characterHairColour = characterHairColour;
     this.characterWeapon = characterWeapon;
+    this.uid = logInScreen.getUid();
+
+    // is equal to the log in screen one using getter
   }
 
   public String getCharacterInGameName() {

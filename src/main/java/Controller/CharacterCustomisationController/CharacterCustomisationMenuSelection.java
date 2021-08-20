@@ -13,7 +13,7 @@ public class CharacterCustomisationMenuSelection {
     if (menuNumber.equals("1")){
       System.out.println("What is your characters name?");
 
-      //Set character name using model
+      //save this tot he current live varibale so its attached to their profile, using the iud
     }else if (menuNumber.equals("2")){
       System.out.println("What is your characters hair colour?");
     }else if (menuNumber.equals("3")){

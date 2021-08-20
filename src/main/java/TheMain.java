@@ -1,6 +1,7 @@
 import Controller.GameMenuController.GameMenu;
 import Controller.AgeAuthenticationController.AgeAuthentication;
 import Controller.GameMenuController.AuthenticationMenu;
+import Model.UidGenerator;
 
 
 public class TheMain {
@@ -17,6 +18,11 @@ public class TheMain {
 
     GameMenu gameMenu = new GameMenu();
     gameMenu.gameMenu();
+
+
+    //Testing to see if the uid generator is working
+//    UidGenerator uidGenerator = new UidGenerator();
+//    uidGenerator.generateUniqueUid();
 
   }
 }
