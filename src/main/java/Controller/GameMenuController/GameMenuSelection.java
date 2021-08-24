@@ -1,6 +1,7 @@
 package Controller.GameMenuController;
 
 import Controller.CharacterCustomisationController.CharacterCustomizationMenu;
+import Service.DeletePlayer.DeleteProfile;
 import Service.GameMenuServices.GameSettings;
 import Service.GameMenuServices.PlayDiamondDungeons;
 
@@ -22,7 +23,17 @@ public class GameMenuSelection {
     }else if (menuNumber.equals("3")){
       gameSettings = new GameSettings();
       gameSettings.settings();
-    }else{
+    } else if (menuNumber.equals("5")) {
+      DeleteProfile deleteProfile = new DeleteProfile();
+      deleteProfile.deleteAllProfilesByUID();
+      AuthenticationMenu authenticationMenu = new AuthenticationMenu();
+      authenticationMenu.authenticationScreen();
+      GameMenu gameMenu = new GameMenu();
+      gameMenu.gameMenu();
+
+    }
+
+    else{
       System.out.println("Please enter the number options that are available.");
       GameMenu gameMenu = new GameMenu();
       gameMenu.gameMenu();

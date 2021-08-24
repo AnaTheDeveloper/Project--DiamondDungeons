@@ -1,11 +1,13 @@
 package Model;
 
+import static GlobalVariables.CurrentLogInScreenModelInUse.accessTheCurrentLiveVariable;
+
 public class CustomCharacterModel {
 
   private String characterInGameName;
   private String characterHairColour;
   private String characterWeapon;
-  private int uid;
+  private String uid;
 
   LogInScreen logInScreen;
 
@@ -14,7 +16,7 @@ public class CustomCharacterModel {
     this.characterInGameName = characterInGameName;
     this.characterHairColour = characterHairColour;
     this.characterWeapon = characterWeapon;
-    this.uid = logInScreen.getUid();
+    this.uid = accessTheCurrentLiveVariable().getUid();
 
     // is equal to the log in screen one using getter
   }

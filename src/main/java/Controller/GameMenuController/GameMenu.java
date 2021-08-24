@@ -14,12 +14,13 @@ public void gameMenu(){
     System.out.println("[1] Play");
     System.out.println("[2] Customise Character");
     System.out.println("[3] Settings");
-    System.out.println("[4] Exit Game");
+    System.out.println("[5] Delete account");
+    System.out.println("[6] Exit Game");
 
     Scanner menuOption = new Scanner(System.in);
     String menuOptionResponse = String.valueOf(menuOption.nextLine());
 
-    if (menuOptionResponse.equals("4")) {
+    if (menuOptionResponse.equals("6")) {
       System.out.println("Thanks for playing");
       System.exit(0);
     }

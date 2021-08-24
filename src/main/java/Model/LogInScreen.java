@@ -4,7 +4,7 @@ public class LogInScreen {
 
   private String username;
   private String password;
-  private int uid;
+  private String uid;
 
   UidGenerator uidGenerator = new UidGenerator();
 
@@ -19,7 +19,7 @@ public class LogInScreen {
     //create random 6 letter string in java
   }
 
-  public int getUid() {
+  public String getUid() {
     return uid;
   }
 
@@ -39,11 +39,13 @@ public class LogInScreen {
     this.password = password;
   }
 
+
   @Override
   public String toString() {
-    return "NewPlayerSignUp{" +
+    return
         "username='" + username + '\'' +
         ", password='" + password + '\'' +
+        ", uid=" + uid +
         '}';
   }
 }

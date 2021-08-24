@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class UidGenerator {
 
-  public int generateUniqueUid(){
+  public String generateUniqueUid(){
 
     String upperAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     String lowerAlphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -30,7 +30,7 @@ public class UidGenerator {
     String randomString = sb.toString();
     System.out.println("UID is: " + randomString);
 
-    return length;
+    return randomString;
   }
 }
 

@@ -3,6 +3,7 @@ package DataAccessLayer;
 import Model.CustomCharacterModel;
 import Model.LogInScreen;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class GameDatabase {
 
@@ -37,12 +38,20 @@ public class GameDatabase {
 
 
 
-  public static void removingAnAccountFromTheDatabase(){
+  public static void removingAnAccountFromTheDatabase(String UID) {
+    //get database
+    ArrayList<LogInScreen> usersAccountInformation = databaseAccess();
+    //Use Iterator method to go through list.
+    Iterator<LogInScreen> DATABASE = usersAccountInformation.iterator();
+    //loop
+    while (DATABASE.hasNext()) {
+      LogInScreen profilesIMightDelete = DATABASE.next();
 
-    /* 1: Ask user which is the account name
-       2: Compare usersresponse with whats int he database
-     */
+      if (profilesIMightDelete.getUid().equals(UID)) {
+        DATABASE.remove();
+      }
 
+    }
   }
 
   public static void viewTheDatabase(ArrayList<LogInScreen> viewDatabase){
@@ -85,18 +94,7 @@ public class GameDatabase {
 
   //This method checks the database for the username that the user inputted.
 
-  public static void addingNewCharacterProfileToTheDatabase(CustomCharacterModel newCharacterProfile){
 
-//    ArrayList<CustomCharacterModel> customCharacter = databaseAccess();
-//
-//    customCharacter.add(newCharacterProfile);
-//
-//    for (CustomCharacterModel customCharacterModel : diamondDungeonsDatabase){
-//      System.out.println(customCharacterModel.toString());
-//    }
-    //This method adds a new character to the database
-    //DO I NEED A NEW DATABASE TO HOLD THIS NEW INFO??
-  }
 
 
 }
