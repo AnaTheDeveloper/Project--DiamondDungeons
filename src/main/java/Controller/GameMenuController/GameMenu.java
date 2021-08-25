@@ -14,6 +14,7 @@ public void gameMenu(){
     System.out.println("[1] Play");
     System.out.println("[2] Customise Character");
     System.out.println("[3] Settings");
+    System.out.println("[4] Update Acccount");
     System.out.println("[5] Delete account");
     System.out.println("[6] Exit Game");
 

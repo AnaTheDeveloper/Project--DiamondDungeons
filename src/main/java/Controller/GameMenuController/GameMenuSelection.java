@@ -4,6 +4,7 @@ import Controller.CharacterCustomisationController.CharacterCustomizationMenu;
 import Service.DeletePlayer.DeleteProfile;
 import Service.GameMenuServices.GameSettings;
 import Service.GameMenuServices.PlayDiamondDungeons;
+import Service.UpdateInfo.ChangeUsername;
 
 public class GameMenuSelection {
 
@@ -23,17 +24,22 @@ public class GameMenuSelection {
     }else if (menuNumber.equals("3")){
       gameSettings = new GameSettings();
       gameSettings.settings();
+    } else if (menuNumber.equals("4")){
+      ChangeUsername changeUsername = new ChangeUsername();
+      changeUsername.changeUsernameByUid();
+
+      GameMenu gameMenu = new GameMenu();
+      gameMenu.gameMenu();
     } else if (menuNumber.equals("5")) {
       DeleteProfile deleteProfile = new DeleteProfile();
       deleteProfile.deleteAllProfilesByUID();
+
       AuthenticationMenu authenticationMenu = new AuthenticationMenu();
       authenticationMenu.authenticationScreen();
+
       GameMenu gameMenu = new GameMenu();
       gameMenu.gameMenu();
-
-    }
-
-    else{
+    } else{
       System.out.println("Please enter the number options that are available.");
       GameMenu gameMenu = new GameMenu();
       gameMenu.gameMenu();

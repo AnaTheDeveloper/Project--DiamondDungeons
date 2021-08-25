@@ -13,16 +13,30 @@ public class TheMain {
       System.exit(0);
     }
 
+    //This checks if the user is old enough to play the game.
+
     AuthenticationMenu authenticationMenu = new AuthenticationMenu();
     authenticationMenu.authenticationScreen();
+
+    //Once confirmed they are then let into the lobby menu
 
     GameMenu gameMenu = new GameMenu();
     gameMenu.gameMenu();
 
+    //Then the game menu.
 
-    //Testing to see if the uid generator is working
-//    UidGenerator uidGenerator = new UidGenerator();
-//    uidGenerator.generateUniqueUid();
+
+
+
+
+
+
+
+    /*Testing to see if the uid generator is working
+      UidGenerator uidGenerator = new UidGenerator();
+      uidGenerator.generateUniqueUid();
+
+     */
 
   }
 }

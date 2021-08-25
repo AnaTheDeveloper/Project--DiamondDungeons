@@ -1,5 +1,8 @@
 package DataAccessLayer;
 
+import static GlobalVariables.CurrentLogInScreenModelInUse.accessTheCurrentLiveVariable;
+import static GlobalVariables.CurrentLogInScreenModelInUse.activateNewLiveVariable;
+
 import Model.CustomCharacterModel;
 import Model.LogInScreen;
 import java.util.ArrayList;
@@ -38,33 +41,47 @@ public class GameDatabase {
 
 
 
-  public static void removingAnAccountFromTheDatabase(String UID) {
+  public static void removingAnAccountFromTheDatabase(String Uid) {
     //get database
     ArrayList<LogInScreen> usersAccountInformation = databaseAccess();
     //Use Iterator method to go through list.
-    Iterator<LogInScreen> DATABASE = usersAccountInformation.iterator();
+    Iterator<LogInScreen> iterator = usersAccountInformation.iterator();
     //loop
-    while (DATABASE.hasNext()) {
-      LogInScreen profilesIMightDelete = DATABASE.next();
+    while (iterator.hasNext()) {
+      LogInScreen profilesIMightDelete = iterator.next();
 
-      if (profilesIMightDelete.getUid().equals(UID)) {
-        DATABASE.remove();
+      if (profilesIMightDelete.getUid().equals(Uid)) {
+        iterator.remove();
       }
 
     }
   }
 
-  public static void viewTheDatabase(ArrayList<LogInScreen> viewDatabase){
 
-//    for (int database = 0; database < viewDatabase.size(); database++){
-//      System.out.println(viewDatabase.get(database) + " ");
-//    }
-//    System.out.println();
-  }
+  public static void updatingAnAccountInTheDatabase(String Uid, String newUsername){
+    //Find the profile in the database
 
-  public static void updateTheDatabase(){
+     //get database
+      ArrayList<LogInScreen> usersAccountInformation = databaseAccess();
 
-    //Using .set methodd
+      LogInScreen currentProfile = accessTheCurrentLiveVariable();
+
+      //assign new profile name to their uid
+
+     currentProfile.setUsername(newUsername);
+
+      //Delete the old version
+
+    removingAnAccountFromTheDatabase(Uid);
+
+     //save new profile to database
+
+    addingNewAccountToTheDatabase(currentProfile);
+
+     //refresh live variable
+
+    activateNewLiveVariable(currentProfile);
+
 
 
   }
