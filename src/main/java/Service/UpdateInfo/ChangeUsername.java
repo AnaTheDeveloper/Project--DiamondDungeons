@@ -19,6 +19,8 @@ public class ChangeUsername {
 
     //Ask what username they want:
 
+    System.out.println("Enter a new username: ");
+
     Scanner newUsername = new Scanner(System.in);
     String newUsernameResponce = String.valueOf(newUsername.nextLine());
 
